@@ -5,7 +5,6 @@ SPI lepton_spi(SPI_MOSI, SPI_MISO, SPI_SCK);
 I2C i2c(I2C_SDA, I2C_SCL);
 DigitalOut spi_cs(SPI_CS);
 DigitalOut beep(D2);
-Timer timer;
 #define VOSPI_FRAME_SIZE (164) 
 uint8_t lepton_frame_packet[VOSPI_FRAME_SIZE]; 
 int lepton_image[80][80];
@@ -173,13 +172,13 @@ void transfer(void)
             frame_counter++;
             
             {
-                //if(frame_counter%18 ==0)
-                //{
+                if(frame_counter%18 ==0)
+                {
                     print_image_binary_state = 0;
                    //pic_c++;
                    //pc.printf("%d, ",timer.read_ms());
                     
-                //}
+                }
             }
             new_frame = 0;
         }
@@ -199,7 +198,7 @@ void lepton_command(unsigned int moduleID, unsigned int commandID, unsigned int 
   data_write[2] = (moduleID & 0x0f);
   data_write[3] = (((commandID << 2 ) & 0xfc) | (command & 0x3));
 
-  error = i2c.write(ADDRESS,data_write,4,0);    // stop transmitting
+  error = i2c.write(ADDRESS,data_write,4,0);    
   
   if (error != 0)
   {
@@ -213,7 +212,7 @@ void set_reg(unsigned int reg)
   int error;
   char data_write[2];
   data_write[0] = (reg >> 8 & 0xff);
-  data_write[1] = (reg & 0xff);            // sends one byte
+  data_write[1] = (reg & 0xff);            
 
   error = i2c.write(ADDRESS,data_write,2,0);
   
@@ -232,11 +231,11 @@ int read_reg(unsigned int reg)
   char read_data[2];
   set_reg(reg);
   i2c.read(ADDRESS,read_data,2,0);
+  
   reading = read_data[0];  // receive high byte (overwrites previous reading)
-  //Serial.println(reading);
   reading = reading << 8;    // shift high byte to be high 8 bits
-
   reading |= read_data[1]; // receive low byte as lower 8 bits
+  
   return reading;
 }
 
@@ -297,7 +296,7 @@ void metric_enable()
   //16bit command_reg address
   data_write[0] = (0x00);
   data_write[1] = (COMMANDID_REG);
-  //16bit module id of AGC (0x0100) binary AND with SET (0x01) and then split into 2 bytes (0x0101)
+  //16bit module id VID enable focus metric calculation
   data_write[2] = (0x03);
   data_write[3] = (0x0D);
   error = i2c.write(ADDRESS,data_write,4,0);
@@ -315,7 +314,7 @@ void tresh()
   //16bit data_reg address
   data_write[0] = (0x00);
   data_write[1] = (DATA0);
-  //16bit command equivalent to SDK LEP_GetAgcEnableState()
+  //16bit command - treshold 
   data_write[2] = (0x75);
   data_write[3] = (0x30);
   error = i2c.write(ADDRESS,data_write,4,0);
@@ -339,7 +338,7 @@ void tresh()
   //16bit command_reg address
   data_write[0] = (0x00);
   data_write[1] = (COMMANDID_REG);
-  //16bit module id of AGC (0x0100) binary AND with SET (0x01) and then split into 2 bytes (0x0101)
+  //16bit module id  VID set Focus metric treshold
   data_write[2] = (0x03);
   data_write[3] = (0x15);
   error = i2c.write(ADDRESS,data_write,4,0);
@@ -368,17 +367,10 @@ int main()
     int j;
     metric_enable();
     tresh();
-    //timer.start();
     while(1) 
     {
-        //begin = timer.read_ms();
         //transfer();
         //print_image_binary_background();
-        //if(timer.read() >= 20)
-        //{
-            //pc.printf("took %d frames in 20 secs", frame_counter);
-            //break;
-        //}
         
         lepton_command(VID, 0x18 >> 2 , GET);
         j = read_data();

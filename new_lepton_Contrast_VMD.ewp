@@ -12,7 +12,7 @@
       <name>General</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <version>22</version>
+        <version>24</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -26,11 +26,6 @@
         <option>
           <name>ListPath</name>
           <state>Debug\List</state>
-        </option>
-        <option>
-          <name>Variant</name>
-          <version>21</version>
-          <state>40</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -59,11 +54,6 @@
           <state>0</state>
         </option>
         <option>
-          <name>FPU</name>
-          <version>3</version>
-          <state>5</state>
-        </option>
-        <option>
           <name>OGCoreOrChip</name>
           <state>1</state>
         </option>
@@ -87,7 +77,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.30.1.7765</state>
+          <state>7.50.2.10499</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -136,13 +126,8 @@
           <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Full.h</state>
         </option>
         <option>
-          <name>GFPUCoreSlave</name>
-          <version>21</version>
-          <state>38</state>
-        </option>
-        <option>
           <name>GBECoreSlave</name>
-          <version>21</version>
+          <version>22</version>
           <state>38</state>
         </option>
         <option>
@@ -156,6 +141,34 @@
         <option>
           <name>GRuntimeLibThreads</name>
           <state>0</state>
+        </option>
+        <option>
+          <name>CoreVariant</name>
+          <version>22</version>
+          <state>39</state>
+        </option>
+        <option>
+          <name>GFPUDeviceSlave</name>
+          <state>STM32F401xE	ST STM32F401xE</state>
+        </option>
+        <option>
+          <name>FPU2</name>
+          <version>0</version>
+          <state>4</state>
+        </option>
+        <option>
+          <name>NrRegs</name>
+          <version>0</version>
+          <state>1</state>
+        </option>
+        <option>
+          <name>NEON</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUCoreSlave2</name>
+          <version>22</version>
+          <state>39</state>
         </option>
       </data>
     </settings>
@@ -172,37 +185,21 @@
         </option>
         <option>
           <name>CCDefines</name>
-          
-            <state>TARGET_RTOS_M4_M7</state>
-          
-            <state>TARGET_FF_ARDUINO</state>
-          
-            <state>__CORTEX_M4</state>
-          
-            <state>TARGET_STM32F401RE</state>
-          
-            <state>TARGET_FF_MORPHO</state>
-          
-            <state>TARGET_CORTEX_M</state>
-          
-            <state>__FPU_PRESENT=1</state>
-          
-            <state>__MBED__=1</state>
-          
-            <state>TARGET_NUCLEO_F401RE</state>
-          
-            <state>TARGET_M4</state>
-          
-            <state>TARGET_STM</state>
-          
-            <state>MBED_BUILD_TIMESTAMP=1453962380.76</state>
-          
-            <state>TARGET_STM32F4</state>
-          
-            <state>TOOLCHAIN_IAR</state>
-          
-            <state>ARM_MATH_CM4</state>
-          
+          <state>TARGET_RTOS_M4_M7</state>
+          <state>TARGET_FF_ARDUINO</state>
+          <state>__CORTEX_M4</state>
+          <state>TARGET_STM32F401RE</state>
+          <state>TARGET_FF_MORPHO</state>
+          <state>TARGET_CORTEX_M</state>
+          <state>__FPU_PRESENT=1</state>
+          <state>__MBED__=1</state>
+          <state>TARGET_NUCLEO_F401RE</state>
+          <state>TARGET_M4</state>
+          <state>TARGET_STM</state>
+          <state>MBED_BUILD_TIMESTAMP=1453962380.76</state>
+          <state>TARGET_STM32F4</state>
+          <state>TOOLCHAIN_IAR</state>
+          <state>ARM_MATH_CM4</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -331,21 +328,13 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-        
           <state>$PROJ_DIR$\.</state>
-        
           <state>$PROJ_DIR$\mbed</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TARGET_STM</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR</state>
-        
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -628,8 +617,8 @@
         <debug>1</debug>
         <option>
           <name>OOCOutputFormat</name>
-          <version>2</version>
-          <state>2</state>
+          <version>3</version>
+          <state>3</state>
         </option>
         <option>
           <name>OCOutputOverride</name>
@@ -655,6 +644,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -803,152 +793,78 @@
         </option>
         <option>
           <name>IlinkAdditionalLibs</name>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/mbed.a</state>
-        
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_flash_ramfunc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/board.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/cmain.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/cmsis_nvic.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/hal_tick.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/mbed_overrides.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/retarget.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/startup_stm32f401xe.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_adc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_adc_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_can.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_cec.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_cortex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_crc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_cryp.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_cryp_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dac.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dac_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dcmi.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dcmi_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dma.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dma2d.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_dma_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_eth.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_flash.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_flash_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_fmpi2c_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_fmpi2c.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_smartcard.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_gpio.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_hash.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_hash_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_hcd.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_i2c.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_i2c_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_i2s.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_i2s_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_irda.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_iwdg.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_ltdc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_nand.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_nor.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_pccard.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_pcd.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_pcd_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_pwr.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_pwr_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_qspi.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_rcc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_rcc_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_rng.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_rtc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_rtc_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_sai.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_sai_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_sd.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_sdram.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_spdifrx.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_spi.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_sram.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_tim.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_tim_ex.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_uart.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_usart.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_hal_wwdg.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_ll_fmc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_ll_fsmc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_ll_sdmmc.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/stm32f4xx_ll_usb.o</state>
-        
           <state>$PROJ_DIR$\mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_IAR/system_stm32f4xx.o</state>
-        
         </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
@@ -1142,7 +1058,7 @@
       <name>General</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <version>22</version>
+        <version>24</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -1156,11 +1072,6 @@
         <option>
           <name>ListPath</name>
           <state>Release\List</state>
-        </option>
-        <option>
-          <name>Variant</name>
-          <version>21</version>
-          <state>0</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -1189,11 +1100,6 @@
           <state>0</state>
         </option>
         <option>
-          <name>FPU</name>
-          <version>2</version>
-          <state>0</state>
-        </option>
-        <option>
           <name>OGCoreOrChip</name>
           <state>0</state>
         </option>
@@ -1217,7 +1123,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>6.30.1.53141</state>
+          <state>7.50.2.10499</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1229,7 +1135,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>default    None</state>
+          <state>Default	None</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -1266,13 +1172,8 @@
           <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Normal.h</state>
         </option>
         <option>
-          <name>GFPUCoreSlave</name>
-          <version>21</version>
-          <state>0</state>
-        </option>
-        <option>
           <name>GBECoreSlave</name>
-          <version>21</version>
+          <version>22</version>
           <state>0</state>
         </option>
         <option>
@@ -1285,6 +1186,34 @@
         </option>
         <option>
           <name>GRuntimeLibThreads</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CoreVariant</name>
+          <version>22</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUDeviceSlave</name>
+          <state>Default	None</state>
+        </option>
+        <option>
+          <name>FPU2</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>NrRegs</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>NEON</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUCoreSlave2</name>
+          <version>22</version>
           <state>0</state>
         </option>
       </data>
@@ -1714,7 +1643,7 @@
         <debug>0</debug>
         <option>
           <name>OOCOutputFormat</name>
-          <version>2</version>
+          <version>3</version>
           <state>0</state>
         </option>
         <option>
@@ -1741,6 +1670,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -2074,8 +2004,8 @@
     </settings>
   </configuration>
   <file>
-<name>$PROJ_DIR$/main.cpp</name>
-</file>
-
+    <name>$PROJ_DIR$\main.cpp</name>
+  </file>
 </project>
+
 
