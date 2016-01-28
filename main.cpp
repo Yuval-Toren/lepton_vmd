@@ -1,10 +1,11 @@
 #include "mbed.h"
 
-Serial pc(SERIAL_TX, SERIAL_RX);
+Serial pc(D8, D2);
 SPI lepton_spi(SPI_MOSI, SPI_MISO, SPI_SCK);
 I2C i2c(I2C_SDA, I2C_SCL);
 DigitalOut spi_cs(SPI_CS);
 DigitalOut beep(D2);
+
 #define VOSPI_FRAME_SIZE (164) 
 uint8_t lepton_frame_packet[VOSPI_FRAME_SIZE]; 
 int lepton_image[80][80];
